@@ -1,0 +1,15 @@
+740ebcc1ce220a0b6aba3108bf8f34c9 *DESCRIPTION
+212e0fd2ad468964c4938a85fe4569dd *NAMESPACE
+e8a7bffca16c7f31c98e93acc5d35ad3 *R/DoseResponseModels.R
+991108e5410c3797662c7137603816cb *R/bootstrap_test.R
+08e017d0705dc79d8c14153f949e144e *R/dff.R
+a32605b04d8bc6f59063822cc8391a7d *man/betaMod.Rd
+895a9d38bcfef0c9a1a0e63b119aa01a *man/bootstrap_test.Rd
+b01adfca9e65759c2bf380b7cf33ada4 *man/dff.Rd
+97ed61f59f40bd41d5594d1adce38279 *man/emax.Rd
+ceb48abce431c30cc2e45355b252e3f6 *man/exponential.Rd
+611456c2f12641e8cdc3af5fb3dc7936 *man/linear.Rd
+2b0a36d212d0883e38d4e05cd65cc0a5 *man/linlog.Rd
+dce1b5feaad970f643eaa3ea00ff8ae0 *man/logistic.Rd
+74ea3a067cbfbe58f4205f89635e3ce0 *man/quadratic.Rd
+b971e4c67fcfdc93ee1efd232cc4926a *man/sigEmax.Rd
