@@ -1,7 +1,7 @@
 ################################################################################
 #' Implementation of EMAX models
 #'
-#' Emax model: \deqn{m(d,\theta)=E_0+E_{max}\frac{d}{ED_{50}+d}}
+#' Emax model: \deqn{m(d,\beta)=E_0+E_{max}\frac{d}{ED_{50}+d}}
 #' 
 #' @param d real-valued argument to the function (dose variable)
 #' @param e model parameter
@@ -13,7 +13,7 @@ emax <- function(d,e){
 ################################################################################
 #' Implementation of linear models
 #'
-#' Linear model: \deqn{m(d,\theta)=E_0+\delta d}
+#' Linear model: \deqn{m(d,\beta)=E_0+\delta d}
 #' 
 #' @param d real-valued argument to the function (dose variable)
 #' @param e model parameter
@@ -25,7 +25,7 @@ linear <- function(d,e){
 ################################################################################
 #' Implementation of exponential models
 #'
-#' Exponential model: \deqn{m(d,\theta)=E_0+E_1(exp(d/\delta)-1)}
+#' Exponential model: \deqn{m(d,\beta)=E_0+E_1(exp(d/\delta)-1)}
 #' 
 #' @param d real-valued argument to the function (dose variable)
 #' @param e model parameter
@@ -37,7 +37,7 @@ exponential <- function(d,e){
 ################################################################################
 #' Implementation of quadratic models
 #'
-#' Quadratic model: \deqn{m(d,\theta)=E_0+\beta_1 d+\beta_2 d^2}
+#' Quadratic model: \deqn{m(d,\beta)=E_0+\beta_1 d+\beta_2 d^2}
 #' 
 #' @param d real-valued argument to the function (dose variable)
 #' @param e model parameter
@@ -49,7 +49,7 @@ quadratic <- function(d,e){
 ################################################################################
 #' Implementation of logistic models
 #'
-#' Logistic model: \deqn{m(d,\theta)=E_0+\frac{E_{max}}{1+exp[(ED_{50}-d)/\delta]}}
+#' Logistic model: \deqn{m(d,\beta)=E_0+\frac{E_{max}}{1+exp[(ED_{50}-d)/\delta]}}
 #' 
 #' @param d real-valued argument to the function (dose variable)
 #' @param e model parameter
@@ -61,7 +61,7 @@ logistic <- function(d,e){
 ################################################################################
 #' Implementation of Sigmoid Emax models
 #'
-#' Sigmoid Emax Model model: \deqn{m(d,\theta)=E_0+E_{max} \frac{d^h}{ED_{50}^h+d^h}}
+#' Sigmoid Emax Model model: \deqn{m(d,\beta)=E_0+E_{max} \frac{d^h}{ED_{50}^h+d^h}}
 #' 
 #' @param d real-valued argument to the function (dose variable)
 #' @param e model parameter
@@ -73,7 +73,7 @@ sigEmax <- function(d,e){
 ################################################################################
 #' Implementation of Beta models
 #'
-#' Beta model: \deqn{m(d,\theta)=E_0+E_{max}B(\delta_1,\delta_2)(d/scal)^{\delta_1}(1-d/scal)^{\delta_2}}
+#' Beta model: \deqn{m(d,\beta)=E_0+E_{max}B(\delta_1,\delta_2)(d/scal)^{\delta_1}(1-d/scal)^{\delta_2}}
 #' with \deqn{B(\delta_1,\delta_2)=(\delta_1+\delta_2)^{\delta_1+\delta_2}/(\delta_1^{\delta_1} \delta_2^{\delta_2})}
 #' and \eqn{scal} is a fixed dose scaling parameter.
 #' 
@@ -88,7 +88,7 @@ betaMod <- function(d,e,scal){
 ################################################################################
 #' Implementation of linear in log models
 #'
-#' Linear in log Model model: \deqn{m(d,\theta)=E_0+\delta\ log(d+off)}
+#' Linear in log Model model: \deqn{m(d,\beta)=E_0+\delta\ log(d+off)}
 #' and \eqn{off} is a fixed offset parameter.
 #' 
 #' @param d real-valued argument to the function (dose variable)
